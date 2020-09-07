@@ -5,12 +5,16 @@ void day1() {
     printf("\n\nWas moechtest du starten? \n"
            "Option (1): Hallo Welt\n"
            "Option (2): Kontoaufgabe\n"
+           "Option (3): Messung\n"
+           "Option (4): Messung (eigene Lsg)\n"
            "Option (0): Exit Program\n\t");
     scanf("%d", &caseProgram);
 
     switch (caseProgram){
         case 1: day1Transcript(); day1(); break;
         case 2: day1Konto(); day1(); break;
+        case 3: day1Messung1(); day1(); break;
+        case 4: day1Messung2(); day1(); break;
         case 0: printf("\n--- exiting ---"); break;
         default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day1(); break;
     }
@@ -87,3 +91,118 @@ void day1Konto() {
     printf("Inhaber von Konto %d: %s %s\n", kt1.nummer, kt1.inhaber.vorname, kt1.inhaber.nachname);
     printf("Inhaber von Konto %d: %s %s\n", kt2.nummer, kt2.inhaber.vorname, kt2.inhaber.nachname);
 }
+
+void day1Messung1() {
+    // Lösung von/mit Mirek
+    typedef struct {
+        int stunde;
+        int minute;
+        int sekunde;
+    } Uhrzeit;
+
+    typedef struct {
+        Uhrzeit zeit;
+        char messungName[20];
+        double messwert;
+    } Messdaten;
+
+
+
+    int stunde = 7;
+    int minute = 48;
+    int sekunde = 12;
+    char messungName [] = "Messung #001";
+    double messwert = 420.42;
+
+    printf("%s", messungName);
+
+    Uhrzeit zeitpunkt = {
+    zeitpunkt.stunde = stunde,
+    zeitpunkt.minute = minute,
+    zeitpunkt.sekunde = sekunde
+    };
+
+    Messdaten messung1 = {
+        messung1.zeit = zeitpunkt,
+        strcpy(messung1.messungName, messungName),
+        messung1.messwert = messwert
+    };
+
+    printf("Die %s hatte denn Wert %.2f um %d:%d:%d", messung1.messungName, messung1.messwert, messung1.zeit.stunde, messung1.zeit.minute, messung1.zeit.sekunde);
+
+}
+
+void day1Messung2() {
+    /*
+        Sie sollen eine Datenstruktur zur Speicherung von technischen Messdaten
+        entwickeln.
+        Der Ingenieur, der die Messungen durchführt, möchte folgende Daten
+        ablegen: die Uhrzeit in Stunden, Minuten und Sekunden (wenn möglich
+        einzeln, da dann die Auswertung einfacher ist), um welche Messung es sich
+        gehandelt hat, z.B. Spannung, Druck, Temperatur oder andere. Er kann ihnen
+        aber keine vollständige Auflistung nennen, da immer andere Messungen
+        gewünscht werden und den gemessenen Wert, der immer eine Ganzzahl
+        oder eine Gleitkommazahl ist.
+        Speichern Sie eine Messung, in dem sie die Daten von der Konsole einlesen.
+    */
+
+    typedef struct {
+        int stunden;
+        int minuten;
+        int sekunden;
+    } zeit;
+
+    typedef struct {
+        zeit messZeit;
+        char messGroesse[20];
+        double messErgebnis;
+    } messdaten;
+
+    int MAX = 10;
+    messdaten daten[MAX];
+    int counter = 0;
+    int breakout = 1;
+
+    do {
+        printf("\nGeben Sie den Zeitpunkt der Messung ein:");
+        printf("\nStunden - ");
+        fflush(stdin);
+        scanf("%d", &daten[counter].messZeit.stunden);
+        printf("Minuten - ");
+        fflush(stdin);
+        scanf("%d", &daten[counter].messZeit.minuten);
+        printf("Sekunden - ");
+        fflush(stdin);
+        scanf("%d", &daten[counter].messZeit.sekunden);
+
+        printf("\nUm welche Messgröße geht es?\n");
+        fflush(stdin);
+        scanf("%s", daten[counter].messGroesse);
+
+        printf("\nWelches Ergebnis hat die Messung?\n");
+        fflush(stdin);
+        scanf("%lf", &daten[counter].messErgebnis);
+
+        counter++;
+        if (counter < MAX) {
+            printf("\nFortfahren? (1 - ja / 0 - nein) \n");
+            fflush(stdin);
+            scanf("%d", &breakout);
+        }
+        else breakout = 0;
+
+    } while (breakout != 0);
+
+    for (int i = 0; i < counter; i++) {
+        printf("\n\nMessung(%d)", i+1);
+        printf("\nZeitpunkt der Messung: %d:%d:%d.", daten[i].messZeit.stunden, daten[i].messZeit.minuten, daten[i].messZeit.sekunden);
+        printf("\nMessgroesse: %s"
+               "\nMessergebnis: %.2lf",
+               daten[i].messGroesse, daten[i].messErgebnis
+        );
+    }
+}
+
+
+
+
