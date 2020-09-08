@@ -3,7 +3,7 @@
 void day1() {
     int caseProgram;
     printf("\n\nWas moechtest du starten? \n"
-           "Option (1): Hallo Welt\n"
+           "Option (1): Tag 1 Mitschrift\n"
            "Option (2): Kontoaufgabe\n"
            "Option (3): Messung\n"
            "Option (4): Messung (eigene Lsg)\n"
