@@ -6,7 +6,6 @@ void day2() {
            "Option (1): Paketaufgabe\n"
            "Option (2): Kontoaufgabe Erweiterung\n"
            "Option (3): Inkassoaufgabe 04_02_12_V1\n"
-//           "Option (4): Messung (eigene Lsg)\n"
            "Option (0): Exit Program\n\t");
     scanf("%d", &caseProgram);
 
@@ -14,7 +13,6 @@ void day2() {
         case 1: day2Paket(); day2(); break;
         case 2: day2Konto(); day2(); break;
         case 3: day2Inkasso(); day2(); break;
-//        case 4: day2Messung2(); day2(); break;
         case 0: printf("\n--- exiting ---"); break;
         default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day2(); break;
     }
@@ -171,8 +169,9 @@ void day2Inkasso() {
     rechnung rechnung4 = {1003, "2010-02-05", 507213.11, {"Uwe", "Ulrich"}, 1};
     rechnungen[0] = rechnung1;
     rechnungen[1] = rechnung2;
-    rechnungen[2] = rechnung3;
-    rechnungen[3] = rechnung4;
+    // Alternative Zuweisung mit typecast
+    rechnungen[2] = (rechnung) {1002, "2011-05-27", 67213.32, {"Richard", "Rümmel"}, 0};
+    rechnungen[3] = (rechnung) {1003, "2010-02-05", 507213.11, {"Uwe", "Ulrich"}, 1};
 
     int exit = 1;
     do {
@@ -190,16 +189,14 @@ void day2Inkasso() {
                     system("cls");
                     printf("\nOffene Rechnungen:\n");
                     for (int i = 0; rechnungen[i].rechnungsnummer != 0; i++) {
-                        if (!rechnungen[i].bezahlt) {
-                            if (rechnungen[i].rechnungsbetrag >= schwellenwert) {
-                                printf("\nRechnung(%d): Rechnungsnummer: %d vom %s\n"
-                                   "Empfänger: %s, %s\n"
-                                   "Betrag: %.2lf\n"
-                                   ,i ,rechnungen[i].rechnungsnummer, rechnungen[i].rechnungsdatum
-                                   ,rechnungen[i].empfaenger.nachname, rechnungen[i].empfaenger.vorname
-                                   ,rechnungen[i].rechnungsbetrag
-                                );
-                            }
+                        if (!rechnungen[i].bezahlt && rechnungen[i].rechnungsbetrag >= schwellenwert) {
+                            printf("\nRechnung(%d): Rechnungsnummer: %d vom %s\n"
+                               "Empfänger: %s, %s\n"
+                               "Betrag: %.2lf\n"
+                               ,i ,rechnungen[i].rechnungsnummer, rechnungen[i].rechnungsdatum
+                               ,rechnungen[i].empfaenger.nachname, rechnungen[i].empfaenger.vorname
+                               ,rechnungen[i].rechnungsbetrag
+                            );
                         }
                     }
                 }
