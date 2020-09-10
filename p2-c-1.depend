@@ -1,13 +1,25 @@
 # depslib dependency file v1.0
-1599643032 source:c:\users\tmide\documents\dev\p2-c-1\main.c
+1599755319 source:c:\users\tmide\documents\dev\p2-c-1\main.c
 	<stdio.h>
 	<stdlib.h>
+	"types.h"
 
-1599548063 source:c:\users\tmide\documents\dev\p2-c-1\day1.c
+1599755166 source:c:\users\tmide\documents\dev\p2-c-1\day1.c
 	<stdio.h>
+	"types.h"
 
-1599654212 source:c:\users\tmide\documents\dev\p2-c-1\day2.c
+1599755393 source:c:\users\tmide\documents\dev\p2-c-1\day2.c
 	<stdio.h>
+	"types.h"
 
-1599653591 source:c:\users\tmide\documents\dev\p2-c-1\day3.c
+1599755631 source:c:\users\tmide\documents\dev\p2-c-1\day3.c
+	"types.h"
+
+1599755737 source:c:\users\tmide\documents\dev\p2-c-1\day4.c
+	"types.h"
+
+1599754826 c:\users\tmide\documents\dev\p2-c-1\types.h
+
+1599753289 source:c:\users\tmide\documents\dev\p2-c-1\day5.c
+	"types.h"
 

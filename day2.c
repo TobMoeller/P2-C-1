@@ -1,22 +1,23 @@
 #include <stdio.h>
+#include "types.h"
 
-void day2() {
-    int caseProgram;
-    printf("\n\nWas moechtest du starten? \n"
-           "Option (1): Paketaufgabe\n"
-           "Option (2): Kontoaufgabe Erweiterung\n"
-           "Option (3): Inkassoaufgabe 04_02_12_V1\n"
-           "Option (0): Exit Program\n\t");
-    scanf("%d", &caseProgram);
+//void day2() {
+//    char descriptions[][50] = {
+//        "Paketaufgabe",
+//        "Kontoaufgabe Erweiterung",
+//        "Inkassoaufgabe 04_02_12_V1"
+//    };
+//    int laenge = sizeof(descriptions)/ sizeof(descriptions[0]);
+//
+//    switch (caseProgram(descriptions, laenge)){
+//        case 1: day2Paket(); day2(); break;
+//        case 2: day2Konto(); day2(); break;
+//        case 3: day2Inkasso(); day2(); break;
+//        case 0: printf("\n--- exiting ---"); break;
+//        default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day2(); break;
+//    }
+//}
 
-    switch (caseProgram){
-        case 1: day2Paket(); day2(); break;
-        case 2: day2Konto(); day2(); break;
-        case 3: day2Inkasso(); day2(); break;
-        case 0: printf("\n--- exiting ---"); break;
-        default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day2(); break;
-    }
-}
 
 
 void day2Paket() {
@@ -224,5 +225,15 @@ void day2Inkasso() {
 
 }
 
+void day2() {
+    daily day[] = {
+        "Exit Program", switchDay,
+        "Paketaufgabe", day2Paket,
+        "Kontoaufgabe Erweiterung", day2Konto,
+        "Inkassoaufgabe 04_02_12_V1", day2Inkasso,
+    };
+    int laenge = sizeof(day)/ sizeof(day[0]);
 
+    caseProgram(day, laenge, day2);
+}
 

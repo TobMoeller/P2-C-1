@@ -1,24 +1,24 @@
 #include <stdio.h>
+#include "types.h"
 
-void day1() {
-    int caseProgram;
-    printf("\n\nWas moechtest du starten? \n"
-           "Option (1): Tag 1 Mitschrift\n"
-           "Option (2): Kontoaufgabe\n"
-           "Option (3): Messung\n"
-           "Option (4): Messung (eigene Lsg)\n"
-           "Option (0): Exit Program\n\t");
-    scanf("%d", &caseProgram);
+//void day1() {
+//    char descriptions[][50] = {
+//        "Mitschrift",
+//        "Kontoaufgabe",
+//        "Messung",
+//        "Messung (eigene Lsg)"
+//    };
+//    int laenge = sizeof(descriptions)/ sizeof(descriptions[0]);
+//
+//    switch (caseProgram(descriptions, laenge)){
+//        case 1: day1Transcript(); day1(); break;
+//        case 2: day1Konto(); day1(); break;
+//        case 3: day1Messung1(); day1(); break;
+//        case 4: day1Messung2(); day1(); break;
+//        case 0: printf("\n--- exiting ---"); switchDay(); break;
+//        default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day1(); break;
+//    }
 
-    switch (caseProgram){
-        case 1: day1Transcript(); day1(); break;
-        case 2: day1Konto(); day1(); break;
-        case 3: day1Messung1(); day1(); break;
-        case 4: day1Messung2(); day1(); break;
-        case 0: printf("\n--- exiting ---"); break;
-        default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day1(); break;
-    }
-}
 
 void day1Transcript() {
     // learning about structures
@@ -203,6 +203,18 @@ void day1Messung2() {
     }
 }
 
+void day1() {
+    daily day[] = {
+        "Exit Program", switchDay,
+        "Mitschrift", day1Transcript,
+        "Kontoaufgabe", day1Konto,
+        "Messung", day1Messung1,
+        "Messung (eigene Lsg)", day1Messung2,
+    };
+    int laenge = sizeof(day)/ sizeof(day[0]);
+
+    caseProgram(day, laenge, day1);
+}
 
 
 

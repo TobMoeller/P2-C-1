@@ -1,31 +1,31 @@
+#include "types.h"
 
 int day3BeispielFkt(int, char);
 
-void day3() {
-    int caseProgram;
-    printf("\n\nWas moechtest du starten? \n"
-           "Option (1): Mitschrift\n"
-           "Option (2): Quersumme\n"
-//           "Option (3): Inkassoaufgabe 04_02_12_V1\n"
-//           "Option (4): Messung (eigene Lsg)\n"
-           "Option (0): Exit Program\n\t");
-    scanf("%d", &caseProgram);
+//void day3() {
+//    char descriptions[][50] = {
+//        "Mitschrift",
+//        "Quersumme"
+//    };
+//    int laenge = sizeof(descriptions)/ sizeof(descriptions[0]);
+//
+//    switch (caseProgram(descriptions, laenge)){
+//        case 1: day3Transcript(); day3(); break;
+//        case 2: day3Quersumme(); day3(); break;
+////        case 3: day3Inkasso(); day3(); break;
+////        case 4: day3Messung2(); day3(); break;
+//        case 0: printf("\n--- exiting ---"); break;
+//        default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day3(); break;
+//    }
+//}
 
-    switch (caseProgram){
-        case 1: day3Transcript(); day3(); break;
-        case 2: day3Quersumme(); day3(); break;
-//        case 3: day3Inkasso(); day3(); break;
-//        case 4: day3Messung2(); day3(); break;
-        case 0: printf("\n--- exiting ---"); break;
-        default: printf("\nBitte ein Case angeben\n"); scanf("%*c"); day3(); break;
-    }
-}
 
 void day3Transcript() {
     printf("%c, %c, %c, %d", 257, 256+48, 256+65, 9%10);
     printf("\nreturn: %c", day3BeispielFkt('A', 0));
     printf("\nreturn: %c", day3BeispielFkt(0, 'A'));
 }
+
 int day3BeispielFkt(int a, char b) {
     printf("\n%d\t%c", a, b);
     return a + b;
@@ -77,9 +77,7 @@ int berechneIterativeQuersumme(int zahl) {
 }
 
 int berechneIterativeQuersumme2(int zahl) {
-    while(zahl >= 10) {
-        zahl = zahl / 10 + zahl % 10;
-    }
+    while(zahl >= 10) zahl = zahl / 10 + zahl % 10;
     return zahl;
 }
 
@@ -97,3 +95,14 @@ int berechneIterativeQuersumme2(int zahl) {
 //1+2+8       12+8
 //2+0         2+0
 //2
+
+void day3() {
+    daily day[] = {
+        "Exit Program", switchDay,
+        "Mitschrift", day3Transcript,
+        "Quersumme", day3Quersumme,
+    };
+    int laenge = sizeof(day)/ sizeof(day[0]);
+
+    caseProgram(day, laenge, day3);
+}
