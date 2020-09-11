@@ -46,13 +46,15 @@ void switchDay() {
 
 void caseProgram(daily day[], int laenge, void *function()) {
     int caseProgram;
+
     printf("\n\nWas moechtest du starten?");
     for (int i = 1; i < laenge; i++) {
         printf("\nOption (%d): %s", i, day[i].description);
     }
     printf("\nOption (0): Exit Program\n\t");
     scanf("%d", &caseProgram);
-    day[caseProgram].function();
+
+    day[caseProgram].function(); // day1()
     function();
 }
 
