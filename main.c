@@ -9,6 +9,7 @@ void day2();
 void day3();
 void day4();
 void day5();
+void day6();
 
 int main(void)
 {
@@ -38,6 +39,7 @@ void switchDay() {
         "Tag 3", day3,
         "Tag 4", day4,
         "Tag 5", day5,
+        "Tag 6", day6,
     };
     int laenge = sizeof(day)/ sizeof(day[0]);
 

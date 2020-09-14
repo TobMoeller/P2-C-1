@@ -46,6 +46,9 @@
 		<Unit filename="day5.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="day6.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
