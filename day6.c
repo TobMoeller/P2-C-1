@@ -134,13 +134,14 @@ void day6findeZeichen() {
 
     int findeZeichen(char *text, int *anzahlX) {
         int i;
-        for (i;text[i] != '\0'; i++) {
+        for (i = 0; text[i] != '\0'; i++) {
             if (text[i] == 'X' || text[i] == 'x') {
-                *anzahlX +=1;
+                (*anzahlX)++;
             }
         }
         return i;
     }
+
     int anzahlZeichen = findeZeichen(text, &anzahlX);
     printf("\nDer Text ist %d Zeichen lang und hat %d 'X'e.", anzahlZeichen, anzahlX);
 }
