@@ -166,6 +166,28 @@ void day7buchhaltung() {
     } while (weiter);
 }
 
+void day7bubbleSort() {
+    int testArray[] = {1,6,7,45,25,5,4,17,9,64,43,8,1,5,64,88,135,14,13,43,74,12,-7,8};
+    int laenge = sizeof(testArray)/ sizeof(testArray[0]);
+    int weiter = 1, letzterIndex = 1;
+
+    while (weiter) {
+        weiter = 0;
+        for (int i = 0; i < laenge - letzterIndex; i++) {
+            if (testArray[i] > testArray[i+1]) {
+                int temp = testArray[i];
+                testArray[i] = testArray[i+1];
+                testArray[i+1] = temp;
+                weiter = 1;
+            }
+        }
+        letzterIndex++;
+    }
+    printf("\nNach %d Durchläufen:\n", letzterIndex);
+    for (int i = 0; i < laenge; i++) {
+        printf("%d ", testArray[i]);
+    }
+}
 
 void day7() {
     daily day[] = {
@@ -173,6 +195,7 @@ void day7() {
         "Berechne String", day7stringRechnen,
         "strtol tests", day7testfktn,
         "Buchhaltung (05_01_T2)", day7buchhaltung,
+        "Bubble Sort", day7bubbleSort,
     };
     int laenge = sizeof(day)/ sizeof(day[0]);
 
