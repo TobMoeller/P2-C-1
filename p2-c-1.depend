@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1600158265 source:c:\users\tmide\documents\dev\p2-c-1\main.c
+1600245142 source:c:\users\tmide\documents\dev\p2-c-1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"types.h"
@@ -29,11 +29,14 @@
 	<stdlib.h>
 	"types.h"
 
-1600168456 source:c:\users\tmide\documents\dev\p2-c-1\day7.c
+1600204446 source:c:\users\tmide\documents\dev\p2-c-1\day7.c
 	<errno.h>
 	<limits.h>
 	<stdbool.h>
 	<stdio.h>
 	<stdlib.h>
+	"types.h"
+
+1600268039 source:c:\users\tmide\documents\dev\p2-c-1\day8.c
 	"types.h"
 

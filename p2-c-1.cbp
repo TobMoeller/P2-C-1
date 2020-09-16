@@ -52,6 +52,9 @@
 		<Unit filename="day7.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="day8.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
