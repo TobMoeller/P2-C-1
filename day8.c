@@ -3,7 +3,7 @@
 void intBubbleSort(int *, int);
 
 void tauscheInt(int [], int, int);
-
+void quickAusgabe(int [], int , int , int, int*);
 
 void day8searchLinear() {
     /*
@@ -145,26 +145,37 @@ void day8testFktn() {
 void day8quickSort() {
     int array[] = {12, 45, 234, 76, 2, 98, 3, 5, 9, 11, 6, 18};
     int laenge = sizeof(array)/ sizeof(array[0]);
+    int zaehler = 0;
 
-    intQuickSort(array, 0, laenge-1);
+    intQuickSort(array, 0, laenge-1, &zaehler);
+    printf("\n\n\nFinale Ausgabe:\n");
     for (int i = 0; i < laenge; i++) printf("%d, ", array[i]);
 }
 
-void intQuickSort(int array[], int anfang, int laenge) {
-    // unfertig
+void intQuickSort(int array[], int anfang, int laenge, int *zaehler) {
+    (*zaehler)++;
     int links = anfang, rechts = laenge;
-    int pivot = links;
+    int pivot = anfang;
+
+    quickAusgabe(array, 12, links, rechts, zaehler);
     while (links < rechts) {
 
-        while (array[links] <= array[pivot]) links++;
-        while (array[rechts] >= array[pivot]) rechts--;
+        while (array[links] <= array[pivot] && links < laenge) links++;
+        while (array[rechts] >= array[pivot] && rechts > anfang) rechts--;
+
+        quickAusgabe(array, 12, links, rechts, zaehler);
 
         if (links < rechts) {
             tauscheInt(array, links, rechts);
+
+            quickAusgabe(array, 12, links, rechts, zaehler);
         } else {
             tauscheInt(array, pivot, rechts);
-            intQuickSort(array, anfang, rechts-1);
-            intQuickSort(array, rechts+1, laenge);
+
+            quickAusgabe(array, 12, links, rechts, zaehler);
+
+            intQuickSort(array, anfang, rechts-1, zaehler);
+            intQuickSort(array, rechts+1, laenge, zaehler);
         }
     }
 }
@@ -173,6 +184,14 @@ void tauscheInt(int array[], int quelle, int ziel) {
     int temp = array[quelle];
     array[quelle] = array[ziel];
     array[ziel] = temp;
+}
+
+void quickAusgabe(int array[], int laenge, int links, int rechts, int *zaehler) {
+    printf("\n\n%dter Funktionsaufruf:\n", *zaehler);
+    for (int i = 0; i < laenge; i++) {
+        if (i != links && i != rechts) printf("%d, ", array[i]);
+        else printf("(%d) ", array[i]);
+    }
 }
 
 void day8() {
