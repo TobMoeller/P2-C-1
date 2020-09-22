@@ -1,9 +1,6 @@
 #include <errno.h>
 #include <limits.h>
 #include <stdbool.h>
-#include <stdio.h>
-
-#include <stdlib.h>
 #include "types.h"
 
 int day7berechneString(char *, int *);

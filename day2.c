@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "types.h"
 
 //void day2() {
@@ -112,7 +111,7 @@ void day2Konto() {
     konto kt1 = {12345, {"Günni", "Günther"}, 1450.34, 4500};
     konto kt2 = {54321, {"Ganno", "Gauner"}, -125.09, 350};
 
-    konto bank[100] = {};
+    konto bank[100] = {0};
 
     bank[0] = kt1;
     bank[1] = kt2;
@@ -166,8 +165,8 @@ void day2Inkasso() {
     rechnung rechnungen[100] = {0};
     rechnung rechnung1 = {1000, "2012-08-17", 1753.53, {"Günni", "Günsen"}, 0};
     rechnung rechnung2 = {1001, "2013-04-12", 23153.44, {"Astrid", "Arschtritt"}, 0};
-    rechnung rechnung3 = {1002, "2011-05-27", 67213.32, {"Richard", "Rümmel"}, 1};
-    rechnung rechnung4 = {1003, "2010-02-05", 507213.11, {"Uwe", "Ulrich"}, 1};
+//    rechnung rechnung3 = {1002, "2011-05-27", 67213.32, {"Richard", "Rümmel"}, 1};
+//    rechnung rechnung4 = {1003, "2010-02-05", 507213.11, {"Uwe", "Ulrich"}, 1};
     rechnungen[0] = rechnung1;
     rechnungen[1] = rechnung2;
     // Alternative Zuweisung mit typecast

@@ -1,8 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "types.h"
 
-void caseProgram(daily [], int, void *());
+
 void exitProgram();
 void day1();
 void day2();
@@ -12,6 +10,7 @@ void day5();
 void day6();
 void day7();
 void day8();
+void day12();
 
 int main(void)
 {
@@ -44,13 +43,14 @@ void switchDay() {
         "Tag 6", day6,
         "Tag 7", day7,
         "Tag 8", day8,
+        "Tag 12", day12,
     };
     int laenge = sizeof(day)/ sizeof(day[0]);
 
     caseProgram(day, laenge, switchDay);
 }
 
-void caseProgram(daily day[], int laenge, void *function()) {
+void caseProgram(daily day[], int laenge, void (*function)()) {
     int caseProgram;
 
     printf("\n\nWas moechtest du starten?");

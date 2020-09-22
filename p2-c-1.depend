@@ -1,42 +1,40 @@
 # depslib dependency file v1.0
-1600245142 source:c:\users\tmide\documents\dev\p2-c-1\main.c
-	<stdio.h>
-	<stdlib.h>
+1600781053 source:c:\users\tmide\documents\dev\p2-c-1\main.c
 	"types.h"
 
-1599809191 source:c:\users\tmide\documents\dev\p2-c-1\day1.c
-	<stdio.h>
+1600781062 source:c:\users\tmide\documents\dev\p2-c-1\day1.c
 	"types.h"
 
-1599755393 source:c:\users\tmide\documents\dev\p2-c-1\day2.c
-	<stdio.h>
+1600781069 source:c:\users\tmide\documents\dev\p2-c-1\day2.c
 	"types.h"
 
-1599755631 source:c:\users\tmide\documents\dev\p2-c-1\day3.c
+1600781049 source:c:\users\tmide\documents\dev\p2-c-1\day3.c
 	"types.h"
 
 1599755737 source:c:\users\tmide\documents\dev\p2-c-1\day4.c
 	"types.h"
 
-1599813591 c:\users\tmide\documents\dev\p2-c-1\types.h
+1600781038 c:\users\tmide\documents\dev\p2-c-1\types.h
+	<stdio.h>
+	<string.h>
+	<string.h>
 
 1599831600 source:c:\users\tmide\documents\dev\p2-c-1\day5.c
 	"types.h"
 	<math.h>
 
-1600151541 source:c:\users\tmide\documents\dev\p2-c-1\day6.c
-	<stdio.h>
-	<stdlib.h>
+1600781090 source:c:\users\tmide\documents\dev\p2-c-1\day6.c
 	"types.h"
 
-1600204446 source:c:\users\tmide\documents\dev\p2-c-1\day7.c
+1600781098 source:c:\users\tmide\documents\dev\p2-c-1\day7.c
 	<errno.h>
 	<limits.h>
 	<stdbool.h>
-	<stdio.h>
-	<stdlib.h>
 	"types.h"
 
 1600366492 source:c:\users\tmide\documents\dev\p2-c-1\day8.c
+	"types.h"
+
+1600781045 source:c:\users\tmide\documents\dev\p2-c-1\day12.c
 	"types.h"
 

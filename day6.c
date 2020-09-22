@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "types.h"
 void day6laenge(char[][30], int);
 

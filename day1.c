@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "types.h"
 
 //void day1() {
@@ -34,9 +33,9 @@ void day1Transcript() {
         1994,
         "978-3-519-02137-7",
         49.95,
-        "Teubner"
+        "Teubner",
     };
-    printf("Buch1: \n%s\n%d\n%s\%f\n%s", buch1.titel, buch1.auflage, buch1.isbn, buch1.preis, buch1.verlag);
+    printf("Buch1: \n%s \n%d \n%s \n%f \n%s", buch1.titel, buch1.auflage, buch1.isbn, buch1.preis, buch1.verlag);
 }
 
 void day1Konto() {
