@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1600781053 source:c:\users\tmide\documents\dev\p2-c-1\main.c
+1600842636 source:c:\users\tmide\documents\dev\p2-c-1\main.c
 	"types.h"
 
 1600781062 source:c:\users\tmide\documents\dev\p2-c-1\day1.c
@@ -14,9 +14,9 @@
 1599755737 source:c:\users\tmide\documents\dev\p2-c-1\day4.c
 	"types.h"
 
-1600781038 c:\users\tmide\documents\dev\p2-c-1\types.h
+1600842835 c:\users\tmide\documents\dev\p2-c-1\types.h
 	<stdio.h>
-	<string.h>
+	<stdlib.h>
 	<string.h>
 
 1599831600 source:c:\users\tmide\documents\dev\p2-c-1\day5.c
@@ -35,6 +35,9 @@
 1600366492 source:c:\users\tmide\documents\dev\p2-c-1\day8.c
 	"types.h"
 
-1600781045 source:c:\users\tmide\documents\dev\p2-c-1\day12.c
+1600843146 source:c:\users\tmide\documents\dev\p2-c-1\day12.c
+	"types.h"
+
+1600843044 source:c:\users\tmide\documents\dev\p2-c-1\day13.c
 	"types.h"
 

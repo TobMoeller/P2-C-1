@@ -48,7 +48,7 @@ void day12PAP() {
 
 double day12berechneAufpreis(char verpackung[], int anzahl) {
     double preis;
-    if (anzahl < 30 && strcmp(verpackung, "speziell") == 0) {
+    if (anzahl < 30 && strcmp(strlwr(verpackung), "speziell") == 0) {
         preis = 3;
     } else {
         preis = 0;
