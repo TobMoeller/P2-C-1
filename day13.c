@@ -111,6 +111,7 @@ void day13durchschnitt(int messwerte[][maxarray], int laenge1, int laenge2) {
 
 void day13lkw() {
     /*
+        04_01_22
         Erstellen Sie ein Programm, um einen LKW zu verwalten.
         Der LKW hat eine maximale Ladekapazität in Kg, einen Fahrzeughalter und eine Leistung in Kilowatt.
 
