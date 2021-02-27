@@ -64,7 +64,7 @@ void caseProgram(daily day[], int laenge, void (*function)()) {
     printf("\nOption (0): Exit Program\n\t");
     scanf("%d", &caseProgram);
 
-    day[caseProgram].function(); // day1()
+    day[caseProgram].function();
     function();
 }
 
