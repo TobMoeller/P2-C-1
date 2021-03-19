@@ -20,11 +20,11 @@ Second programming class during retraining
 
 ---
 
-## Small Feature showcase
+## Small feature showcase
 
-Because i did not want a separate program / project for each and every new task, but rather have everything compact and easily accessable, i developed a way to write everything into a single project and switch between the days. This enables me to repetitively try functions with different inputs without having to start the program all over again.
+Because i did not want a separate program / project for each and every new task, but rather have everything compact and easily accessable, i developed a way to write everything into a single project and switch between the days. This enables me to repetedly try functions with different inputs without having to start the program all over again.
 
-At first i tryed an approach with a recursive call of a function asking the user for a decision on what day and then what function to call. This meant i had to repeat this pattern for every day and had a lot of repetetive code and a lot of additional code to type for each additional day and function.
+At first i tried an approach with a recursive call of a function asking the user for a decision on what day and then what function to call. This meant i had to repeat this pattern for every day and had a lot of additional code to write for each additional day and function.
 
 ```c
 void switchCase() {

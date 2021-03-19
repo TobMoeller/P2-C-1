@@ -46,3 +46,51 @@
 	"types.h"
 	<ctype.h>
 
+1600777462 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day1.c
+	"types.h"
+
+1600839235 c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\types.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1600839546 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day12.c
+	"types.h"
+
+1600933034 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day13.c
+	"types.h"
+	<time.h>
+
+1600965068 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day14.c
+	"types.h"
+	<ctype.h>
+	<math.h>
+
+1600777469 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day2.c
+	"types.h"
+
+1600777449 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day3.c
+	"types.h"
+
+1599752137 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day4.c
+	"types.h"
+
+1599828000 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day5.c
+	"types.h"
+	<math.h>
+
+1600777490 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day6.c
+	"types.h"
+
+1600777498 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day7.c
+	<errno.h>
+	<limits.h>
+	<stdbool.h>
+	"types.h"
+
+1600362892 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\day8.c
+	"types.h"
+
+1614436613 source:c:\users\tmide\documents\dev\p2-c-cpp\p2-c-1\main.c
+	"types.h"
+
